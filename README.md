@@ -64,11 +64,31 @@ Uma galeria interativa e responsiva sobre a Pri, um cachorro adorável! Este pro
 - Imagens responsivas com `width: 100%` e `height: auto`
 - Overflow hidden para respeitar border-radius
 
-### 7. **Seção "Sobre" Personalizada**
-- Box com background semi-transparente
-- Padding e margin adequados para leitura confortável
-- Biografia completa da Pri com 5 parágrafos
-- Styling consistente com o resto do site
+### 8. **Modal Interativo com Swiper.js v11**
+- Implementada biblioteca **Swiper.js v11** via CDN para carousel profissional
+- Modal com visualização ampliada ao clicar nas imagens
+- **Duas instâncias Swiper sincronizadas**:
+  - `mainSwiper`: Carousel principal com loop infinito
+  - `thumbsSwiper`: Carousel de miniaturas sincronizado (sem loop)
+- Navegação completa:
+  - Botões anterior/próximo
+  - Clique em miniaturas para ir direto ao slide
+  - Teclado: setas direcionais + ESC para fechar
+- **Legendas dinâmicas**: Atualizam automaticamente ao deslizar
+- **Design responsivo do modal**:
+  - Desktop: Proporção otimizada com imagem grande, legendas em destaque e miniaturas abaixo
+  - Mobile/Tablet: Layout compacto com ajustes automáticos
+  - Captions com fundo semi-transparente, font aumentada (1.2rem) e box-shadow
+  - Miniaturas com zoom e border highlight na ativa
+
+### 9. **Organização e Limpeza de Código**
+- JavaScript migrado para arquivo separado: `scripts/gallery.js`
+- HTML mais limpo e legível sem script inline
+- Código otimizado:
+  - Variáveis com `const` 
+  - Arrow functions modernas
+  - Comentários explicativos para cada seção
+- Estrutura modular facilita manutenção futura
 
 ---
 
@@ -80,9 +100,11 @@ assets/
     icons/
         paw-print.svg
     images/
-        image1.jpg a image11.jpg  
+        image1.jpg a image18.jpg
+scripts/
+    gallery.js                 (Lógica do modal e Swiper)
 styles/
-    gallery.css                (Estilos galeria + animações)
+    gallery.css                (Estilos galeria + modal + animações)
     global.css                 (Design system + responsividade)
     index.css                  (Imports)
 ```
@@ -97,6 +119,7 @@ styles/
 - Favicon customizado
 - `aria-label` para acessibilidade
 
+### CSS3
 - **CSS Grid**: Layout adaptável e responsivo
 - **Flexbox**: Alinhamento e organização de elementos
 - **Variáveis CSS**: Sistema reutilizável de cores e tipografia
@@ -107,27 +130,50 @@ styles/
 - **Transform & Transitions**: Efeitos suaves de zoom e translação
 - **Custom Easing**: `cubic-bezier(0.22, 1, 0.36, 1)` para movimentos elegantes
 
+### JavaScript
+- **DOM Manipulation**: `querySelector`, `addEventListener`, `classList`
+- **Array Methods**: `forEach`, `push` para gerenciamento dinâmico
+- **Event Listeners**: Click, keyboard (arrow keys, ESC), modal close handlers
+
+### Swiper.js v11
+- Carousel profissional e responsivo
+- Sincronização entre instâncias (main + thumbnails)
+- Navegação por botões, teclado e clique em miniaturas
+- Breakpoints responsivos automáticos
+- Loop infinito com gestão correta de índices (`realIndex`)
+
 ---
 
 ## � Como Visualizar
 
 1. Clone ou baixe o repositório
 2. Abra `index.html` no navegador (duplo-clique ou com Live Server)
-3. Faça scroll para ver as animações de entrada
-4. Passe o mouse sobre as imagens para ver os efeitos (desktop)
+3. **Explore a galeria:**
+   - Faça scroll para ver as animações de entrada
+   - Passe o mouse sobre as imagens para ver os efeitos (desktop)
+4. **Interaja com o modal:**
+   - Clique em qualquer foto para abrir em tamanho ampliado
+   - Use as setas (◀ ▶) para navegar entre fotos
+   - Clique nas miniaturas para ir direto ao slide desejado
+   - Use teclado: ← → (setas) para navegar, ESC para fechar
+   - Clique fora da imagem para fechar o modal
 
 ---
 
 ## 💡 Destaques Técnicos Implementados
 
 ✨ **Animações scroll-driven** com `animation-timeline: view()` 
+🎠 **Carousel profissional** com Swiper.js v11 (sincronizado main + thumbnails)
 📐 **CSS Grid avançado** com responsividade automática
+🔍 **Modal interativo** com visualização ampliada e navegação completa
+⌨️ **Navegação por teclado** (arrow keys, ESC)
 🎯 **Acessibilidade semântica** com HTML5 + ARIA labels
 ⚡ **Performance otimizada** com `object-fit` e overflow
 📱 **Responsividade completa** em 3 breakpoints sem frameworks
 🎨 **Design system** com variáveis CSS reutilizáveis
 🔄 **Transições suaves** com custom easing functions
 🖼️ **Componentes bem estruturados**: `<figure>`, `<figcaption>`, `<section>`
+🏗️ **Código organizado** com JavaScript em arquivo separado
 
 ---
 

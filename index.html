@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="styles/index.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&family=Syne:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -47,91 +49,91 @@
 
     <div class="content">
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image2.jpg" alt="Aqui estou no meu lugar favorito">
         <figcaption>Aqui estou eu no meu lugar favorito</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image3.jpg" alt="Feliz na Praia">
         <figcaption>Feliz na Praia</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image9.jpg" alt="Outra foto no meu lugar favorito">
         <figcaption>Outra foto no meu lugar favorito</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image4.jpg" alt="Merece até outra foto desse dia">
         <figcaption>Esse dia merece até mais uma foto</figcaption>
       </figure>
 
-       <figure>
+       <figure class="gallery-item">
         <img src="assets/images/image6.jpg" alt="É assim que eu fico esperando para passear">
         <figcaption>É assim que eu fico esperando para passear</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image1.jpg" alt="Nesse dia fiz amizade com uma vaca">
         <figcaption>Nesse dia fiz amizade com uma vaca</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image7.jpg" alt="E aqui estou eu">
         <figcaption>E aqui estou eu</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image8.jpg" alt="Passeando">
         <figcaption>Passeando por aí</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image10.jpg" alt="Aqui estava completando mais um ano de vida">
         <figcaption>Aqui eu estava completando mais um ano de vida</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image11.jpg" alt="Até ganhei um quadro meu">
         <figcaption>Até ganhei um quadro meu</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image12.jpg" alt="Passeando com meu boné preferido">
         <figcaption>Passeando com meu boné preferido</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image13.jpg" alt="Batendo um papo com meu humano preferido">
         <figcaption>Batendo um papo com meu humano preferido</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image14.jpg" alt="Conferindo se estão curtindo o passeio também">
         <figcaption>Conferindo se estão curtindo o passeio também</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image15.jpg" alt="Um dos meus preferidos">
         <figcaption>Um dos meus preferidos</figcaption>
       </figure>
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image18.jpg" alt="Nesse dia eu ganhei essa ovelha, fiquei muito feliz">
         <figcaption>Passeando durante o pôr do sol</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image16.jpg" alt="Prestigiando o pôr do sol">
         <figcaption>Prestigiando o pôr do sol</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image17.jpg" alt="Descansando um pouco durante meu passeio">
         <figcaption>Descansando um pouco durante meu passeio</figcaption>
       </figure>
 
-      <figure>
+      <figure class="gallery-item">
         <img src="assets/images/image5.jpg" alt="Aqui foi em um natal divertido">
         <figcaption>Aqui foi em um Natal divertido</figcaption>
       </figure>
@@ -145,5 +147,27 @@
   </p>
 
 </footer>
+
+  <div class="swiper-modal" id="swiperModal">
+    <div class="modal-content">
+      <div class="swiper-main-container">
+        <div class="swiper swiper-container" id="mainSwiper">
+          <div class="swiper-wrapper" id="swiperWrapper"></div>
+          <div class="swiper-button-prev" id="prevBtn"></div>
+          <div class="swiper-button-next" id="nextBtn"></div>
+        </div>
+      </div>
+      
+      <div class="swiper-caption" id="swiperCaption"></div>
+      
+      <div class="swiper swiper-thumbs" id="thumbsSwiper">
+        <div class="swiper-wrapper" id="thumbsWrapper"></div>
+      </div>
+    </div>
+    <button class="close-swiper" id="closeSwiper">✕</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="scripts/gallery.js"></script>
 </body>
 </html>
