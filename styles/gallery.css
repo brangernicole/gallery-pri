@@ -106,8 +106,6 @@ section.gallery {
   }
 }
 
-/* ANIMATION */
-
 @keyframes image-appear {
 
   from {
@@ -116,8 +114,6 @@ section.gallery {
     transform: translateY(40px);
   }
 }
-
-/* RESPONSIVIDADE: MOBILE */
 
 @media (max-width: 480px) {
 
@@ -136,20 +132,16 @@ section.gallery {
       height: 15rem;
     }
 
-    /* Legenda sempre visível */
     & figure figcaption {
       transform: translateY(0);
     }
   }
-
-  /* Desabilita hover em mobile */
 
   section.gallery figure:hover > img {
     transform: scale(1);
   }
 }
 
-/* RESPONSIVIDADE: TABLET */
 
 @media (max-width: 1024px) {
 
@@ -168,14 +160,10 @@ section.gallery {
       height: 20rem;
     }
 
-    /* Legenda sempre visível */
-
     & figure figcaption {
       transform: translateY(0);
     }
   }
-
-  /* Desabilita hover em tablet */
 
   section.gallery figure:hover > img {
     transform: scale(1);

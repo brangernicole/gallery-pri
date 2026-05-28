@@ -36,7 +36,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-
+h1,
 h2{
   text-align: center;
   font-family: 'Syne', sans-serif;
@@ -72,7 +72,6 @@ p {
   text-align: center;
 }
 
-/* Responsividade: Mobile */
 @media (max-width: 480px) {
   :root {
     --text-lg: 1.5rem;
@@ -84,7 +83,6 @@ p {
   }
 }
 
-/* Responsividade: Tablet */
 @media (max-width: 1024px) {
   :root {
     --text-lg: 2rem;
