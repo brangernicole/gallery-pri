@@ -1,6 +1,6 @@
 # Gallery-pri 📸
 
-Uma galeria interativa e responsiva sobre a Pri, um cachorro adorável! Este projeto foi desenvolvido com HTML, CSS moderno e inclui animações suaves, responsividade completa e uma experiência de usuário aprimorada.
+Uma galeria interativa e responsiva sobre a Pri, uma cachorra adorável! Este projeto foi desenvolvido com HTML, CSS moderno e inclui animações suaves, responsividade completa e uma experiência de usuário aprimorada.
 
 ---
 
