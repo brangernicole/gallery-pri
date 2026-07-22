@@ -1,9 +1,9 @@
-let swiper = null;
-let thumbsSwiper = null;
-const captions = [];
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Recolher todas as imagens e legendas da galeria
+  // 1. Todas as variáveis agora dentro do DOMContentLoaded
+  let swiper = null;
+  let thumbsSwiper = null;
+  const captions = [];
+
   const galleryItems = document.querySelectorAll('.gallery-item');
   const swiperWrapper = document.getElementById('swiperWrapper');
   const thumbsWrapper = document.getElementById('thumbsWrapper');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiperModal = document.getElementById('swiperModal');
   const closeBtn = document.getElementById('closeSwiper');
 
-  galleryItems.forEach((item, index) => {
+  galleryItems.forEach((item) => {
     const img = item.querySelector('img');
     const caption = item.querySelector('figcaption');
 
@@ -34,15 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
     thumbsWrapper.appendChild(thumb);
   });
 
+  // 4. Breakpoints corrigidos: padrão é mobile, cresce com min-width
   thumbsSwiper = new Swiper('#thumbsSwiper', {
     loop: false,
-    spaceBetween: 10,
-    slidesPerView: 6,
+    spaceBetween: 8,
+    slidesPerView: 8,
     watchSlidesProgress: true,
     breakpoints: {
       480: {
-        slidesPerView: 4,
-        spaceBetween: 8,
+        slidesPerView: 5,
+        spaceBetween: 10,
       },
       1024: {
         slidesPerView: 6,
@@ -68,8 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Atualizar legenda quando desliza
   swiper.on('slideChange', function() {
-    const realIndex = this.realIndex;
-    swiperCaption.textContent = captions[realIndex] || '';
+    swiperCaption.textContent = captions[this.realIndex] || '';
   });
 
   // Atualizar legenda ao iniciar
@@ -77,11 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Abrir modal ao clicar nas imagens
   galleryItems.forEach((item, index) => {
-    const img = item.querySelector('img');
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', () => {
+    item.addEventListener('click', () => {
       swiperModal.classList.add('open');
-      swiper.slideTo(index);
+      // 2. slideToLoop em vez de slideTo — funciona corretamente com loop: true
+      swiper.slideToLoop(index);
+      // 3. Legenda atualizada imediatamente ao abrir o modal
+      swiperCaption.textContent = captions[index] || '';
     });
   });
 

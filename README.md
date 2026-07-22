@@ -1,6 +1,6 @@
 # Gallery-pri 📸
 
-Uma galeria interativa e responsiva sobre a Pri, um cachorro adorável! Este projeto foi desenvolvido com HTML, CSS moderno e inclui animações suaves, responsividade completa e uma experiência de usuário aprimorada.
+Uma galeria interativa e responsiva sobre a Pri, uma cachorra adorável! Este projeto foi desenvolvido com HTML, CSS moderno e inclui animações suaves, responsividade completa e uma experiência de usuário aprimorada.
 
 ---
 
@@ -8,24 +8,23 @@ Uma galeria interativa e responsiva sobre a Pri, um cachorro adorável! Este pro
 
 ### 1. **Estrutura Semântica HTML5**
 - Criada página com seção "Sobre" narrando a história da Pri
-- Implementada galeria com 11 fotos usando `<figure>` e `<figcaption>` para semântica adequada
+- Implementada galeria com 18 fotos usando `<figure>` e `<figcaption>` para semântica adequada
 - Favicon customizado com ícone de pegada de pata (`paw-print.svg`)
 - Atributo `aria-label` na galeria para melhor acessibilidade
 - Meta tags e viewport configurados para responsividade
 
 ### 2. **Sistema de Design com CSS Moderno**
 - **Variáveis CSS** definidas para cores (`--text`, `--background`) e tipografia
-- **Três famílias de fontes importadas do Google Fonts**:
+- **Duas famílias de fontes importadas do Google Fonts**:
   - `Montserrat`: Tipografia principal do site
   - `Syne`: Títulos e destaques com personalidade
-  - `Inter`: Alternativa para hierarquia visual
 - Paleta de cores: Branco/azul claro (`#f0f4ffd3`) como background
 - Tipografia responsiva com escalas diferentes por tamanho de tela
 
 ### 3. **Layout Grid Adaptável**
 - **Desktop (> 1024px)**: Grid com 3 colunas, altura de imagens 25rem
 - **Tablet (480px - 1024px)**: Grid com 2 colunas, altura 20rem
-- **Mobile (< 480px)**: Grid com 1 coluna, altura 15rem
+- **Mobile (< 480px)**: Grid com 1 coluna, altura 25rem
 - Implementadas media queries para cada breakpoint
 - Espaçamento e gaps ajustados para cada tamanho de tela
 
@@ -48,6 +47,11 @@ Uma galeria interativa e responsiva sobre a Pri, um cachorro adorável! Este pro
       opacity: 0.5;
       transform: translateY(40px);
     }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   ```
 
@@ -60,7 +64,6 @@ Uma galeria interativa e responsiva sobre a Pri, um cachorro adorável! Este pro
 
 ### 6. **Otimização de Imagens**
 - Uso de `object-fit: cover` para garantir proporção correta
-- `object-position` otimizado em figcaptions
 - Imagens responsivas com `width: 100%` e `height: auto`
 - Overflow hidden para respeitar border-radius
 
@@ -144,7 +147,7 @@ styles/
 
 ---
 
-## � Como Visualizar
+## Como Visualizar
 
 1. Clone ou baixe o repositório
 2. Abra `index.html` no navegador (duplo-clique ou com Live Server)

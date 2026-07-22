@@ -42,7 +42,6 @@ h2{
   font-family: 'Syne', sans-serif;
 }
 
-
 h2 {
   text-align: center;
   font-size: var(--text-lg);
@@ -53,12 +52,6 @@ p {
   text-align: left;
   padding-inline: 1rem;
 }
-.title {
-  text-align: left;
-  margin-top: 3rem;
-  padding-inline: 1rem;
-}
-
 .footer {
   padding: 3rem 1rem;
 
@@ -72,10 +65,36 @@ p {
   text-align: center;
 }
 
+/* Cursor */
+.cursor{
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+  animation: 
+    typewriter 5s steps(50) 1s 1 normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+
 @media (max-width: 480px) {
   :root {
     --text-lg: 1.5rem;
-    --text-xl: 2rem;
   }
 
   p {
@@ -86,6 +105,5 @@ p {
 @media (max-width: 1024px) {
   :root {
     --text-lg: 2rem;
-    --text-xl: 3rem;
   }
 }
